@@ -35,3 +35,33 @@ document.querySelectorAll('[data-photo]').forEach(button => {
   });
 });
 lightbox?.querySelector('button').addEventListener('click', () => lightbox.close());
+
+const videos = document.querySelectorAll('video');
+if (videos.length) {
+  const inView = new Set();
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const updateVideo = video => {
+    if (inView.has(video) && !document.hidden && !reducedMotion.matches) {
+      video.muted = true;
+      video.play().catch(() => {}); // Native controls remain available if autoplay is blocked.
+    } else {
+      video.pause();
+    }
+  };
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && entry.intersectionRatio >= 0.25) inView.add(entry.target);
+      else inView.delete(entry.target);
+      updateVideo(entry.target);
+    });
+  }, { threshold: 0.25 });
+  videos.forEach(video => {
+    video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.playsInline = true;
+    observer.observe(video);
+  });
+  document.addEventListener('visibilitychange', () => videos.forEach(updateVideo));
+  reducedMotion.addEventListener('change', () => videos.forEach(updateVideo));
+}

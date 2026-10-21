@@ -12,7 +12,7 @@ No build tool or package installation is needed. Edit the HTML files directly:
 - `software.html`: selected public GitHub repositories.
 - `building.html`: Reclaimer Labs and MarginPilot.
 - `gallery.html`: photographs and captions.
-- `renewable-project.html`: the complete renewable-project media album (11 photographs and one full video).
+- `renewable-project.html`: the complete renewable-project media album (9 photographs and one full video).
 - `assets/style.css`: colours, typography, and responsive layouts.
 - `assets/site.js`: mobile navigation, battery illustration, and photograph viewer.
 - `assets/battery.mjs` and `assets/battery.css`: interactive homepage flow-battery schematic, charge trace, and playback controls.
@@ -33,6 +33,7 @@ Open `http://127.0.0.1:8765/`. If `py` is unavailable, use your Python executabl
 ```powershell
 py scripts/check_site.py
 node scripts/check_battery.mjs
+node scripts/check_autoplay.mjs
 ```
 
 ## Publish
@@ -60,8 +61,8 @@ The reference for the academic structure was [Akinrinsola J. Agbelusi’s websit
 
 The homepage animation is an accelerated explanatory schematic, separate from the calibrated thesis model. Electrolyte volume remains constant; tint represents changing vanadium oxidation state. Charging and discharging reverse electron flow and the direction of the charge trace. The circulation slider changes visual particle speed. Rest holds charge constant in this simplified illustration. Playback pauses offscreen and when the tab is hidden; reduced-motion users start paused.
 
-The gallery reflects the supplied project context: plant monitoring/control, renewable-energy work with friends, Topaz industrial immersion, storage-model coursework, lithium-lab visits, Nigerian National Youth Service, church, and everyday life. Lithium-lab visits are distinguished from original flow-battery research. HEIC photographs are converted to WebP; the industrial-poster contact line is obscured in its public copy. Complete videos are encoded at 2× speed, have no audio or location metadata, and load only when played. All three lithium-lab videos are included. Original media is unchanged.
+The gallery reflects the supplied project context: plant monitoring/control, renewable-energy work with friends, Topaz industrial immersion, storage-model coursework, lithium-lab visits, Nigerian National Youth Service, church, and everyday life. Lithium-lab visits are distinguished from original flow-battery research. HEIC photographs are converted to WebP; the industrial-poster contact line is obscured in its public copy. Complete videos are encoded at 2× speed, have no audio or location metadata, and automatically play silently on a loop when at least 25% visible. They pause offscreen or in a background tab; reduced-motion visitors retain manual playback. All three lithium-lab videos are included. Original media is unchanged.
 
-The NYSC image uses an SVG viewport to crop the right-hand side of the original photograph without regenerating faces or changing the source pixels. The renewable album includes every file from the supplied renewable-project folder. StressBoard is described as a team prototype and links to the shared presentation; private repository and workspace links are omitted from the public pages.
+The NYSC image uses an SVG viewport to crop the right-hand side of the original photograph without regenerating faces or changing the source pixels. The renewable album keeps nine photographs and the full video. Of the three similar photos with the same friend, only IMG_0516.JPG is used across the site. StressBoard is described as a team prototype and links to the shared presentation; private repository and workspace links are omitted from the public pages.
 
 Additional project context: [Israel’s LinkedIn profile](https://www.linkedin.com/in/israel-owolabi-031867381/).
