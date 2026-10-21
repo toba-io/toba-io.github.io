@@ -42,3 +42,6 @@
 
 .cell-comparison{display:grid;grid-template-columns:1.6fr 1fr;gap:20px}.cell-comparison img{width:100%;height:380px;object-fit:contain}
 @media(max-width:740px){.cell-comparison{grid-template-columns:1fr}.cell-comparison figure:first-child img{height:auto}}
+
+#model-structure .cell-comparison{grid-template-columns:1fr}
+#model-structure .cell-comparison img{height:auto}
