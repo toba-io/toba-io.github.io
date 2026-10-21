@@ -66,3 +66,5 @@ The gallery reflects the supplied project context: plant monitoring/control, ren
 The NYSC image uses an SVG viewport to crop the right-hand side of the original photograph without regenerating faces or changing the source pixels. The renewable album keeps nine photographs and the full video. Of the three similar photos with the same friend, only IMG_0516.JPG is used across the site. StressBoard is described as a team prototype and links to the shared presentation; private repository and workspace links are omitted from the public pages.
 
 Additional project context: [Israel’s LinkedIn profile](https://www.linkedin.com/in/israel-owolabi-031867381/).
+
+The research page and gallery include the laboratory's VRFB cell assembly in Autodesk Fusion, highlighting 3D CAD and assembly-modelling skills. The supplied angled Fusion screenshot is preserved at full resolution in a lossless WebP copy and paired with the corresponding physical cell (IMG_0577.JPG).
