@@ -67,4 +67,4 @@ The NYSC image uses an SVG viewport to crop the right-hand side of the original 
 
 Additional project context: [Israel’s LinkedIn profile](https://www.linkedin.com/in/israel-owolabi-031867381/).
 
-The research page and gallery include the laboratory's VRFB cell assembly in Autodesk Fusion, highlighting 3D CAD and assembly-modelling skills. The supplied angled Fusion screenshot is preserved at full resolution in a lossless WebP copy and paired with the corresponding physical cell (IMG_0577.JPG).
+The research page and gallery include the laboratory's VRFB cell assembly in Autodesk Fusion, highlighting 3D CAD and assembly-modelling skills. The selected Fusion render screenshot is preserved at full resolution in a lossless WebP copy and paired with the corresponding physical cell (IMG_0577.JPG).
