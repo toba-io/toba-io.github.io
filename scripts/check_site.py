@@ -22,7 +22,7 @@ class Page(HTMLParser):
         if tag == 'meta' and a.get('name') == 'description': self.description = True
         if tag == 'meta' and a.get('name') == 'viewport': self.viewport = True
         if tag == 'img' and 'alt' not in a: self.errors.append('image without alt')
-        for attr in ('href','src'):
+        for attr in ('href','src','poster'):
             if a.get(attr): self.links.append(a[attr])
 
 pages = {}

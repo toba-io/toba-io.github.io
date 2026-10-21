@@ -17,7 +17,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="assets/style.css">
+  <link rel="stylesheet" href="assets/battery.css">
   <script src="assets/site.js" defer></script>
+  <script src="assets/battery.mjs" type="module"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -28,14 +30,56 @@
   </div></header>
   <main id="main">
 <div class="wrap">
-  <section class="hero" aria-labelledby="hero-name">
+  <section class="hero hero-home" aria-labelledby="hero-name">
     <div><p class="eyebrow"><span class="dot"></span>Researcher · Engineer · Builder</p>
-      <h1 id="hero-name">Israel<br><em>Owolabi.</em></h1>
-      <p class="hero-lede">I build models to understand batteries,<br class="desktop-break"> and software to put ideas to work.</p>
+      <h1 id="hero-name">Israel <em>Owolabi.</em></h1>
+      <p class="hero-lede">I build models to understand batteries, and software to put ideas to work.</p>
       <p class="hero-meta">MSc researcher in Digital Electrical Energy at Skoltech. Working on vanadium flow batteries, parameter identification, and practical energy storage.</p>
-      <div class="hero-links"><a class="text-link" href="research.html">Explore my research<span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/toba-io">GitHub<span class="arrow" aria-hidden="true">↗</span></a></div>
+      <div class="hero-links"><a class="text-link" href="research.html">Explore my research<span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/toba-io">GitHub<span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="https://www.linkedin.com/in/israel-owolabi-031867381/">LinkedIn<span class="arrow" aria-hidden="true">↗</span></a></div>
     </div>
-    <figure class="hero-picture"><img src="assets/images/portrait.webp" alt="Israel beside a plant-monitoring electronics project" width="1500" height="1125" fetchpriority="high"><figcaption>From the model to the workbench.</figcaption></figure>
+    <figure class="hero-picture"><img src="assets/images/portrait.webp" alt="Israel with the plant monitoring and control system" width="1500" height="1125" fetchpriority="high"><figcaption>A plant, sensors, and a little code.</figcaption></figure>
+  </section>
+  <section class="battery-demo" id="flow-battery" aria-labelledby="battery-heading" data-paused="false" data-mode="charge" data-electrons="true">
+    <div class="battery-heading"><div><p class="eyebrow">An idea in motion</p><h2 id="battery-heading">Energy, in the flow.</h2></div><button id="battery-pause" type="button">Pause animation</button></div>
+    <div class="battery-layout">
+      <div class="battery-schematic">
+        <svg viewBox="0 0 680 300" role="img" aria-labelledby="flow-title flow-desc">
+          <title id="flow-title">An interactive vanadium flow battery</title>
+          <desc id="flow-desc">Two tanks circulate liquid electrolyte through opposite sides of a cell stack. A membrane separates the electrolytes. Charge stores electrical energy by changing vanadium oxidation states; discharge reverses the reactions. Tank volumes stay constant.</desc>
+          <defs><clipPath id="negative-tank"><rect x="48" y="121" width="112" height="104" rx="12"/></clipPath><clipPath id="positive-tank"><rect x="520" y="121" width="112" height="104" rx="12"/></clipPath><pattern id="flow-membrane" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 5L5 0" stroke="#9eaa91" stroke-width="1"/></pattern></defs>
+          <g class="pipe-base"><path d="M104 121V88H277V136M277 202V251H104V225"/><path d="M576 121V88H403V136M403 202V251H576V225"/></g>
+          <g class="electrolyte-path negative"><path d="M104 121V88H277V136"/><path d="M277 202V251H104V225"/></g>
+          <g class="electrolyte-path positive"><path d="M576 121V88H403V136"/><path d="M403 202V251H576V225"/></g>
+          <path class="wire-base" d="M288 139V34H392V139"/>
+          <path class="electron-track" d="M288 139V34H392V139"/>
+          <rect x="313" y="20" width="54" height="29" rx="14" fill="#faf9f5" stroke="#a8b09f"/>
+          <text x="340" y="40" class="electron-label">e⁻</text>
+          <text id="external-circuit" x="340" y="12" class="circuit-label">POWER IN</text>
+          <g clip-path="url(#negative-tank)"><rect x="48" y="121" width="112" height="104" fill="#f0f0e8"/><rect id="negative-liquid" x="48" y="145" width="112" height="80" fill="#778a94"/><path d="M48 146Q76 140 104 146T160 146" fill="none" stroke="#fff" stroke-opacity=".5"/><g class="tank-bubbles" fill="#fff" fill-opacity=".28"><circle cx="69" cy="181" r="3"/><circle cx="124" cy="204" r="2"/><circle cx="140" cy="167" r="2"/></g></g>
+          <g clip-path="url(#positive-tank)"><rect x="520" y="121" width="112" height="104" fill="#f0f0e8"/><rect id="positive-liquid" x="520" y="145" width="112" height="80" fill="#80968e"/><path d="M520 146Q548 140 576 146T632 146" fill="none" stroke="#fff" stroke-opacity=".5"/><g class="tank-bubbles" fill="#fff" fill-opacity=".28"><circle cx="542" cy="199" r="3"/><circle cx="604" cy="177" r="2"/><circle cx="586" cy="211" r="2"/></g></g>
+          <rect class="tank-outline" x="48" y="121" width="112" height="104" rx="12"/><rect class="tank-outline" x="520" y="121" width="112" height="104" rx="12"/>
+          <text x="104" y="173" class="tank-sign">−</text><text x="576" y="173" class="tank-sign">+</text>
+          <rect x="251" y="134" width="178" height="73" rx="3" fill="#f9faf5" stroke="#9ba78f"/>
+          <rect x="261" y="142" width="63" height="57" fill="#768998" fill-opacity=".17"/><rect x="356" y="142" width="63" height="57" fill="#aa945e" fill-opacity=".17"/>
+          <rect x="330" y="134" width="20" height="73" fill="url(#flow-membrane)"/>
+          <path d="M265 144V196M415 144V196" stroke="#6c7c66" stroke-width="4"/>
+          <text x="340" y="125" class="part-label">CELL STACK</text>
+          <text x="340" y="229" class="membrane-label">MEMBRANE</text>
+          <text id="negative-reaction" x="294" y="176" class="reaction-label">III → II</text><text id="positive-reaction" x="386" y="176" class="reaction-label">IV → V</text>
+          <g class="pump"><circle cx="190" cy="251" r="13"/><path class="pump-rotor" style="transform-origin:190px 251px" d="M182 251H198M190 243V259"/></g>
+          <g class="pump"><circle cx="490" cy="251" r="13"/><path class="pump-rotor" style="transform-origin:490px 251px" d="M482 251H498M490 243V259"/></g>
+          <text x="104" y="276" class="part-label">NEGATIVE ELECTROLYTE</text><text x="576" y="276" class="part-label">POSITIVE ELECTROLYTE</text>
+          <text x="104" y="292" class="species-label">V(III) ⇌ V(II)</text><text x="576" y="292" class="species-label">V(IV) ⇌ V(V)</text>
+        </svg>
+      </div>
+      <div class="battery-readout"><div class="charge-number"><div><span>Stored charge</span><output id="battery-charge">50</output><b>%</b></div><span id="battery-status" role="status">Charging</span></div>
+        <svg class="charge-chart" viewBox="0 0 320 158" role="img" aria-label="State of charge over the last 60 seconds of the demonstration"><defs><clipPath id="charge-plot-area"><rect x="31" y="13" width="276" height="111"/></clipPath></defs><g class="chart-grid"><path d="M31 14H307M31 69H307M31 124H307"/></g><g class="chart-labels"><text x="0" y="18">100</text><text x="8" y="73">50</text><text x="15" y="128">0</text><text x="31" y="149">CHARGE / %</text><text x="307" y="149" text-anchor="end">LAST 60 s</text></g><g clip-path="url(#charge-plot-area)"><path id="battery-trace" d="M31 69L32 69"/><circle id="battery-trace-tip" cx="31" cy="69" r="3"/></g></svg>
+        <p id="battery-explanation">Electricity changes the vanadium oxidation states. Energy is stored in the two electrolytes.</p>
+      </div>
+    </div>
+    <div class="battery-controls"><div class="battery-modes" role="group" aria-label="Battery operation"><button type="button" data-battery-mode="charge" aria-pressed="true">Charge</button><button type="button" data-battery-mode="discharge" aria-pressed="false">Discharge</button><button type="button" data-battery-mode="rest" aria-pressed="false">Rest</button></div><label for="battery-start">Starting charge <output id="battery-start-value">50%</output><input id="battery-start" type="range" min="0" max="100" step="1" value="50"></label><label for="battery-flow">Circulation speed <output id="battery-flow-value">1×</output><input id="battery-flow" type="range" min="0.5" max="2" step="0.25" value="1"></label><button class="battery-reset" id="battery-reset" type="button">Reset ↺</button></div>
+    <p class="battery-caption">An accelerated schematic. Colour represents oxidation state; liquid volume stays constant. Circulation speed is visual. <a href="research.html">See the research behind the model ↗</a></p>
+    <noscript><p class="battery-caption">JavaScript enables the controls and live trace. The diagram shows the charging reactions.</p></noscript>
   </section>
   <div class="hero-foot"><span class="label">Currently</span><span>Flow-battery diagnostics at Skoltech</span><span>Co-founding Reclaimer Labs</span><a href="building.html">More about what I’m building ↗</a></div>
   <section class="section" aria-labelledby="research-title">
@@ -54,9 +98,9 @@
     </div>
   </section>
 </div>
-<section class="section tinted" id="about"><div class="wrap about-grid"><div><p class="eyebrow">A little about me</p><h2>Curious about how<br>systems work.</h2></div><div class="about-copy"><p>My work brings together physical systems and software: a battery on a test bench, a model fitted to its measurements, or a tool that makes an operational decision easier.</p><p class="small">I’m in the second year of the MSc in Digital Electrical Energy at Skoltech in Moscow. My thesis focuses on vanadium flow batteries, with Prof. Mikhail Pugach and Prof. Federico Ibanez. Alongside research, I help co-found Reclaimer Labs.</p><div class="inline-links"><a class="text-link" href="software.html">Browse my code<span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/toba-io">Find me on GitHub<span class="arrow" aria-hidden="true">↗</span></a></div></div></div></section>
-<section class="section wrap"><div class="section-head"><div><p class="eyebrow">Outside the simulation</p><h2>A few things from the workbench.</h2></div><a class="text-link" href="gallery.html">View the gallery<span class="arrow" aria-hidden="true">↗</span></a></div><div class="photo-strip"><figure><img src="assets/images/solar-field.webp" alt="Small photovoltaic arrays installed in a grassy outdoor test area" width="1453" height="1082" loading="lazy"><figcaption>Renewable-energy fieldwork</figcaption></figure><figure><img src="assets/images/flow-cell.webp" alt="Flow-battery cell assembly held in a gloved hand" width="1125" height="1500" loading="lazy"><figcaption>Inside the flow-battery lab</figcaption></figure><figure><img src="assets/images/presentation.webp" alt="Israel presenting technical work beside a projected slide" width="1500" height="1500" loading="lazy"><figcaption>Sharing the work</figcaption></figure></div></section>
+<section class="section tinted" id="about"><div class="wrap about-grid"><div><p class="eyebrow">A little about me</p><h2>Curious about how<br>systems work.</h2></div><div class="about-copy"><p>My work brings together physical systems and software: a battery on a test bench, a model fitted to its measurements, or a tool that makes an operational decision easier.</p><p class="small">I’m in the second year of the MSc in Digital Electrical Energy at Skoltech in Moscow. My thesis focuses on vanadium flow batteries, with Prof. Mikhail Pugach and Prof. Federico Ibanez. Alongside research, I help co-found Reclaimer Labs. Before the MSc, I completed my Nigerian National Youth Service; church, community, and time with friends remain part of life outside the lab.</p><div class="inline-links"><a class="text-link" href="software.html">Browse my code<span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="https://github.com/toba-io">Find me on GitHub<span class="arrow" aria-hidden="true">↗</span></a></div></div></div></section>
+<section class="section wrap"><div class="section-head"><div><p class="eyebrow">Work &amp; life</p><h2>A little beyond the research.</h2></div><a class="text-link" href="gallery.html">Explore the gallery<span class="arrow" aria-hidden="true">↗</span></a></div><div class="photo-strip"><figure><img src="assets/images/solar-friends.webp" alt="Israel and a friend at their renewable-energy project" loading="lazy"><figcaption>A renewable-energy project with friends</figcaption></figure><figure><img src="assets/images/national-service.webp" alt="Israel with fellow Nigerian National Youth Service members" loading="lazy"><figcaption>National service, before the MSc</figcaption></figure><figure><img src="assets/images/evening-out.webp" alt="Israel enjoying an evening by the water" loading="lazy" style="object-position:center 63%"><figcaption>Away from the workbench</figcaption></figure></div></section>
 </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><p>© 2026 Israel Owolabi <span aria-hidden="true">·</span> Moscow, Russia</p><p><a href="https://github.com/toba-io">GitHub ↗</a> &nbsp;·&nbsp; Updated 21 October 2026</p></div></footer>
+  <footer class="site-footer"><div class="wrap footer-inner"><p>© 2026 Israel Owolabi <span aria-hidden="true">·</span> Moscow, Russia</p><p><a href="https://github.com/toba-io">GitHub ↗</a> &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/israel-owolabi-031867381/">LinkedIn ↗</a> &nbsp;·&nbsp; Updated 21 October 2026</p></div></footer>
 </body>
 </html>

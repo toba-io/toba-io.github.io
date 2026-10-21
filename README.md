@@ -14,6 +14,8 @@ No build tool or package installation is needed. Edit the HTML files directly:
 - `gallery.html`: photographs and captions.
 - `assets/style.css`: colours, typography, and responsive layouts.
 - `assets/site.js`: mobile navigation, battery illustration, and photograph viewer.
+- `assets/battery.mjs` and `assets/battery.css`: interactive homepage flow-battery schematic, charge trace, and playback controls.
+- `assets/videos/`: short silent H.264 MP4 excerpts, played on demand in the gallery.
 
 Keep the navigation/footer consistent across pages. Update the footer date, research dates, and `sitemap.xml` when adding substantial work. Published work should be identified separately from internal reports, course drafts, and work in progress.
 
@@ -29,6 +31,7 @@ Open `http://127.0.0.1:8765/`. If `py` is unavailable, use your Python executabl
 
 ```powershell
 py scripts/check_site.py
+node scripts/check_battery.mjs
 ```
 
 ## Publish
@@ -51,3 +54,11 @@ There are no server dependencies, analytics, contact-form services, or API crede
 - Selected personal photographs supplied for this portfolio.
 
 The reference for the academic structure was [Akinrinsola J. Agbelusi’s website](https://berry-szn.github.io/). This site uses original markup, styling, and copy.
+
+## Animation and media notes
+
+The homepage animation is an accelerated explanatory schematic, separate from the calibrated thesis model. Electrolyte volume remains constant; tint represents changing vanadium oxidation state. Charging and discharging reverse electron flow and the direction of the charge trace. The circulation slider changes visual particle speed. Rest holds charge constant in this simplified illustration. Playback pauses offscreen and when the tab is hidden; reduced-motion users start paused.
+
+The gallery reflects the supplied project context: plant monitoring/control, renewable-energy work with friends, Topaz industrial immersion, storage-model coursework, lithium-lab visits, Nigerian National Youth Service, church, and everyday life. Lithium-lab visits are distinguished from original flow-battery research. HEIC photographs are converted to WebP; the industrial-poster contact line is obscured in its public copy. Video clips have no audio or location metadata and load only when played. Original media is unchanged.
+
+Additional project context: [Israel’s LinkedIn profile](https://www.linkedin.com/in/israel-owolabi-031867381/).

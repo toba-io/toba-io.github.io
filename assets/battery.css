@@ -1,0 +1,65 @@
+.hero-home{grid-template-columns:minmax(0,1fr) 235px;gap:55px;padding:40px 0 33px}
+.hero-home h1{font-size:clamp(45px,5.3vw,66px);margin-top:10px;max-width:none}
+.hero-home .hero-lede{font-size:23px;line-height:1.4;max-width:675px;margin-top:15px}
+.hero-home .hero-meta{max-width:680px;margin-top:13px;line-height:1.7}
+.hero-home .hero-links{margin-top:16px;gap:26px}
+.hero-home .hero-picture{padding:0 0 15px 12px}
+.hero-home .hero-picture img{height:217px;object-position:68% center}
+.hero-home .hero-picture figcaption{left:14px;font-size:8px;white-space:nowrap;padding:6px 8px}
+.battery-demo{border:1px solid var(--line);background:#f2f3ed;margin:0 0 30px;--negative:#718d90;--positive:#8b9c79;--circulation:2s}
+.battery-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 25px 0}
+.battery-heading .eyebrow{font-size:9px;letter-spacing:.1em}
+.battery-heading h2{font-size:26px;letter-spacing:-.03em;margin-top:4px}
+.battery-heading button,.battery-reset{border:0;background:none;color:var(--muted);font:10px var(--mono);cursor:pointer;padding:8px 0;border-bottom:1px solid #c6ccbd}
+.battery-layout{display:grid;grid-template-columns:1.9fr 1fr;gap:25px;padding:0 25px 11px;align-items:center}
+.battery-schematic{min-width:0}
+.battery-schematic svg{width:100%;height:auto;display:block;overflow:visible}
+.battery-schematic text{text-anchor:middle;fill:#52634c;font-family:var(--mono)}
+.pipe-base{fill:none;stroke:#d5dccd;stroke-width:9;stroke-linejoin:round}
+.electrolyte-path{fill:none;stroke-width:4;stroke-dasharray:1 14;stroke-linecap:round;stroke-linejoin:round;animation:electrolyte-circulation var(--circulation) linear infinite}
+.electrolyte-path.negative{stroke:var(--negative)}
+.electrolyte-path.positive{stroke:var(--positive)}
+.wire-base{fill:none;stroke:#c0c8b5;stroke-width:2}
+.electron-track{fill:none;stroke:var(--rust);stroke-width:3.5;stroke-dasharray:1 16;stroke-linecap:round;animation:electron-travel 2s linear infinite}
+[data-mode=charge] .electron-track{animation-direction:reverse}
+.battery-demo[data-electrons=false] .electron-track{visibility:hidden}
+.tank-outline{fill:none;stroke:#8b9a81;stroke-width:1.5}
+.battery-schematic .tank-sign{font:25px var(--serif);fill:#fff}
+.battery-schematic .part-label{font-size:10px;letter-spacing:.06em}
+.battery-schematic .species-label{font-size:10px;fill:#7b8773}
+.battery-schematic .membrane-label{font-size:8px;letter-spacing:.08em}
+.battery-schematic .reaction-label{font-size:9px;letter-spacing:-.04em}
+.battery-schematic .electron-label{font:20px var(--serif)}
+.battery-schematic .circuit-label{font-size:8px;letter-spacing:.08em}
+.pump circle{fill:#f2f3ed;stroke:#a0ac95;stroke-width:1.5}
+.pump-rotor{fill:none;stroke:#718164;stroke-width:1.5;animation:pump-rotation var(--circulation) linear infinite}
+.battery-demo[data-paused=true] .electrolyte-path,.battery-demo[data-paused=true] .electron-track,.battery-demo[data-paused=true] .pump-rotor{animation-play-state:paused}
+.battery-readout{border-left:1px solid var(--line);padding:10px 0 6px 26px;min-width:0}
+.charge-number{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.charge-number div>span{display:block;font:10px var(--mono);color:var(--muted);margin-bottom:5px}
+.charge-number output{font:44px/1 var(--serif);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
+.charge-number b{font:18px var(--serif);margin-left:3px;font-weight:400;color:var(--muted)}
+#battery-status{font:9px/1.6 var(--mono);padding:4px 7px;background:#e5eadd;max-width:140px}
+.charge-chart{width:100%;height:auto;display:block;margin-top:17px}
+.chart-grid{fill:none;stroke:#d7ddcf;stroke-width:1}
+.chart-labels{fill:#88927f;font:8px var(--mono)}
+#battery-trace{fill:none;stroke:var(--green);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+#battery-trace-tip{fill:var(--green)}
+#battery-explanation{font:11px/1.65 var(--sans);color:var(--muted);margin-top:5px;min-height:36px}
+.battery-controls{display:flex;align-items:center;justify-content:space-between;gap:25px;border-top:1px solid var(--line);padding:16px 25px;background:#f8f8f1}
+.battery-modes{display:flex;gap:2px;padding:3px;border:1px solid #c5cebe;background:var(--paper)}
+.battery-modes button{border:0;background:none;padding:8px 13px;cursor:pointer;color:var(--muted);font:11px var(--mono)}
+.battery-modes button[aria-pressed=true]{background:var(--green);color:#fff}
+.battery-controls label{font:10px/1.7 var(--mono);color:var(--muted);width:185px;display:block}
+.battery-controls label output{float:right;color:var(--ink)}
+.battery-controls input{width:100%;display:block;accent-color:var(--green);margin:7px 0 0;height:14px;cursor:pointer}
+.battery-caption{border-top:1px solid var(--line);padding:11px 25px;font:10px/1.7 var(--sans);color:var(--muted)}
+.battery-caption a{border-bottom:1px solid #c5cebe;white-space:nowrap;margin-left:6px}
+@keyframes electrolyte-circulation{to{stroke-dashoffset:-60}}
+@keyframes electron-travel{to{stroke-dashoffset:-68}}
+@keyframes pump-rotation{to{transform:rotate(360deg)}}
+@media(max-width:1000px){.hero-home{gap:35px;grid-template-columns:minmax(0,1fr) 210px}.hero-home h1{font-size:54px}.hero-home .hero-picture img{height:205px}.battery-layout{grid-template-columns:1.7fr 1fr;gap:15px;padding-inline:18px}.battery-readout{padding-left:18px}.battery-controls{gap:15px;padding:15px 18px}.battery-modes button{padding:8px 10px}.battery-controls label{width:155px}}
+@media(max-width:740px){.hero-home{grid-template-columns:1fr;gap:25px;padding:30px 0 26px}.hero-home h1{font-size:48px}.hero-home .hero-lede{font-size:21px}.hero-home .hero-picture{display:none}.hero-home .hero-links{gap:22px}.battery-heading{padding:17px 17px 0}.battery-heading h2{font-size:24px}.battery-heading button{font-size:9px}.battery-layout{grid-template-columns:1fr;gap:7px;padding:7px 13px 15px}.battery-readout{border-left:0;border-top:1px solid var(--line);padding:15px 4px 0;display:grid;grid-template-columns:1fr 1.7fr;gap:8px 17px;align-items:center}.charge-number{display:block}.charge-number output{font-size:40px}.charge-number div>span{font-size:9px}#battery-status{display:inline-block;margin-top:9px;font-size:8px}.charge-chart{margin-top:5px}#battery-explanation{grid-column:span 2;min-height:0;margin-top:3px}.battery-controls{display:grid;grid-template-columns:1fr 1fr;gap:18px 25px;padding:16px 17px}.battery-modes{grid-column:span 2;justify-self:start}.battery-controls label{width:auto}.battery-reset{grid-column:span 2;justify-self:start;font-size:10px;padding-top:0}.battery-caption{padding:12px 17px}.battery-caption a{margin:3px 0 0;display:inline-block}.battery-schematic .part-label{font-size:11px}.battery-schematic .species-label{font-size:11px}}
+@media(max-width:390px){.hero-home h1{font-size:42px}.hero-home .hero-links{gap:18px}.hero-home .text-link{font-size:12px;gap:8px}.battery-heading{gap:12px}.battery-heading h2{font-size:22px}}
+@media(max-width:740px){.battery-schematic .part-label{font-size:16px}.battery-schematic .species-label{font-size:15px}.battery-schematic .reaction-label{font-size:14px}.battery-schematic .membrane-label,.battery-schematic .circuit-label{font-size:12px}.chart-labels{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.battery-demo .electrolyte-path,.battery-demo .electron-track,.battery-demo .pump-rotor{animation:none}}
