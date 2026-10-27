@@ -68,3 +68,7 @@ The NYSC image uses an SVG viewport to crop the right-hand side of the original 
 Additional project context: [Israel’s LinkedIn profile](https://www.linkedin.com/in/israel-owolabi-031867381/).
 
 The research page and gallery include the laboratory's VRFB cell assembly in Autodesk Fusion, highlighting 3D CAD and assembly-modelling skills. The selected Fusion render screenshot is preserved at full resolution in a lossless WebP copy and paired with the corresponding physical cell (IMG_0577.JPG).
+
+## 27 October 2026 update
+
+The ongoing renewable-energy collaboration is featured before the completed Sharjah course project, with a high-level description and private technical details omitted. The final Sharjah report confirms the existing numerical results; its comparison chart is Figure 7. Research context reflects the thesis log through 26 October, and the supplied 21 October manuscript abstract is featured with an explicit draft label. Internal progress records and full manuscript PDFs are not included in the public assets.
