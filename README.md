@@ -72,3 +72,7 @@ The research page and gallery include the laboratory's VRFB cell assembly in Aut
 ## 27 October 2026 update
 
 The ongoing renewable-energy collaboration is featured before the completed Sharjah course project, with a high-level description and private technical details omitted. The final Sharjah report confirms the existing numerical results; its comparison chart is Figure 7. Research context reflects the thesis log through 26 October, and the supplied 21 October manuscript abstract is featured with an explicit draft label. Internal progress records and full manuscript PDFs are not included in the public assets.
+
+## 29 October 2026 update
+
+The research page records the experimental phase begun on 28 October: an ESP32/ADS1115 reader with two colour sensors, a Fusion-designed and 3D-printed stand for the IKA PETTE vario 100–1000 µL micropipette, and a ten-cycle oxidation-state experiment with camera and colour monitoring. Four complete source clips (IMG_1635, IMG_1636, IMG_1640, IMG_1642) are silent H.264 MP4 copies encoded at 2× speed, using the existing in-view playback logic. The originals are unchanged. Reader calibration and experimental analysis remain pending. The illustrative US$60–80 branded-module budget has linked sources and exclusions; it is not an actual spend claim or a claim of analyzer equivalence. The exact analyzer price is left for a supplier quote. Home and Gallery link to the experimental update.
