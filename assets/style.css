@@ -57,3 +57,9 @@
 #experimental-phase table caption{text-align:left;font:24px/1.3 var(--serif);padding:0 0 18px}
 #experimental-phase tbody th{text-transform:none;letter-spacing:0;font:13px/1.6 var(--sans);border-top:1px solid var(--line);width:20%}
 @media(max-width:740px){.experiment-media{grid-template-columns:1fr}.experiment-media img,.experiment-media video{height:auto;max-height:480px}.experiment-story{margin-top:42px}}
+
+/* Project albums show only their own media, including uncropped posters. */
+.project-album .cad-card img{object-fit:contain;filter:none;background:#eeeee5}
+.project-album.single-item{grid-template-columns:minmax(0,1fr);max-width:1000px;margin-inline:auto}
+.project-album.single-item .gallery-card{grid-column:1}
+.project-album.single-item img{height:auto;max-height:80vh;object-fit:contain;filter:none}

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://toba-io.github.io/</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://toba-io.github.io/research.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://toba-io.github.io/projects.html</loc><lastmod>2026-10-27</lastmod></url>
-  <url><loc>https://toba-io.github.io/software.html</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://toba-io.github.io/building.html</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://toba-io.github.io/gallery.html</loc><lastmod>2026-10-29</lastmod></url>
-  <url><loc>https://toba-io.github.io/renewable-project.html</loc><lastmod>2026-10-27</lastmod></url>
+  <url><loc>https://toba-io.github.io/</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/research.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/projects.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/software.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/gallery.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/renewable-project.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/topaz-media.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/sharjah-media.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/tt-hodmd-media.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/plant-monitoring-media.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/bess-siting-media.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/storage-models-media.html</loc><lastmod>2026-10-31</lastmod></url>
+  <url><loc>https://toba-io.github.io/stressboard-media.html</loc><lastmod>2026-10-31</lastmod></url>
 </urlset>

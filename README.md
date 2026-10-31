@@ -9,10 +9,11 @@ No build tool or package installation is needed. Edit the HTML files directly:
 - `index.html`: introduction, selected work, and short biography.
 - `research.html`: thesis, research status, and writing.
 - `projects.html`: PV/storage course project and practical work.
-- `software.html`: selected public GitHub repositories.
-- `building.html`: Reclaimer Labs and MarginPilot.
+- `software.html`: Reclaimer Labs / MarginPilot and selected public GitHub repositories.
+- `building.html`: compatibility redirect to `software.html#building`.
 - `gallery.html`: photographs and captions.
 - `renewable-project.html`: the complete renewable-project media album (9 photographs and one full video).
+- `*-media.html`: separate media albums for Topaz, Sharjah, tensor-train hoDMD, Flora Wand, battery siting, storage models, and StressBoard.
 - `assets/style.css`: colours, typography, and responsive layouts.
 - `assets/site.js`: mobile navigation, battery illustration, and photograph viewer.
 - `assets/battery.mjs` and `assets/battery.css`: interactive homepage flow-battery schematic, charge trace, and playback controls.
@@ -76,3 +77,7 @@ The ongoing renewable-energy collaboration is featured before the completed Shar
 ## 29 October 2026 update
 
 The research page records the experimental phase begun on 28 October: an ESP32/ADS1115 reader with two colour sensors, a Fusion-designed and 3D-printed stand for the IKA PETTE vario 100–1000 µL micropipette, and a ten-cycle oxidation-state experiment with camera and colour monitoring. Four complete source clips (IMG_1635, IMG_1636, IMG_1640, IMG_1642) are silent H.264 MP4 copies encoded at 2× speed, using the existing in-view playback logic. The originals are unchanged. Reader calibration and experimental analysis remain pending. The reader and analyzer are presented as complementary tools, with purpose and stage described; cost estimates and budget references are omitted. Home and Gallery link to the experimental update.
+
+## 31 October 2026 organisation update
+
+Software and Building share one page and navigation item. Project-page links lead only to that project's media; the full Gallery combines those albums and the existing research and personal collection, with Life & Community first, Projects & Industry next, and the lab collection last. Albums reuse the existing photo viewer and silent in-view video playback. The newer local Flora Wand description is preserved.
