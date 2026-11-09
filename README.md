@@ -105,3 +105,7 @@ The stand was finished on the same day it was printed, not on 9 November; that i
 ### Public copy preference
 
 Keep website text concise and useful to visitors. Do not publish explanations of factual corrections, upload dates or when a photograph was taken unless the timing is relevant to understanding the work. Keep such context in these internal notes; use simple subject captions on the website.
+
+### Research date display
+
+On Research, show calendar dates only in the “Where things stand” timeline. Omit dates elsewhere on that page. This preference does not apply to other pages.
