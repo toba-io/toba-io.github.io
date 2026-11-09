@@ -101,3 +101,7 @@ IMG_0495, IMG_0496 and IMG_0497 belong to a different project, not VetroSol (con
 ### IKA stand completion and presentation correction
 
 The stand was finished on the same day it was printed, not on 9 November; that is the date of the later photograph (Israel, 10 November). The micropipette media forms one two-column group: packaging and CAD on top, finished-stand photo at bottom left and the combined printing video at bottom right. The combined clip preserves both full 2x clips, first layers (IMG_1636) then the later printing stage (IMG_1640), without another speed change.
+
+### Public copy preference
+
+Keep website text concise and useful to visitors. Do not publish explanations of factual corrections, upload dates or when a photograph was taken unless the timing is relevant to understanding the work. Keep such context in these internal notes; use simple subject captions on the website.
