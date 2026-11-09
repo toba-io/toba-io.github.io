@@ -109,3 +109,7 @@ Keep website text concise and useful to visitors. Do not publish explanations of
 ### Research date display
 
 On Research, show calendar dates only in the “Where things stand” timeline. Omit dates elsewhere on that page. This preference does not apply to other pages.
+
+### Describe the work directly
+
+Public descriptions should explain the activity and its purpose, rather than announcing media updates. Avoid “new video”, “new photographs”, “latest update” and similar wording that becomes stale. Keep update chronology in the Research progress timeline and internal records.
