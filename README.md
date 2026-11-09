@@ -81,3 +81,11 @@ The research page records the experimental phase begun on 28 October: an ESP32/A
 ## 31 October 2026 organisation update
 
 Software and Building share one page and navigation item. Project-page links lead only to that project's media; the full Gallery combines those albums and the existing research and personal collection, with Life & Community first, Projects & Industry next, and the lab collection last. Albums reuse the existing photo viewer and silent in-view video playback. The newer local Flora Wand description is preserved.
+
+## 9 November 2026 media and process update
+
+Research and Gallery include five new laboratory assets: the IKA micropipette in its printed stand (IMG_1782), reagents (IMG_1792), the reference electrode (IMG_1789), a Rigol bench comparison of the reader (IMG_1803), and potential-monitored titration (IMG_1795). Photos are optimised WebP copies; both full silent videos run at 2× speed with metadata removed and the existing in-view playback controls. Originals are untouched.
+
+Process descriptions use the supplied Titration_SoC_procedure_EN document and VRFB_AOS_variation_plan_v3 workbook. Titration provides independent validation of colour-based SoC, rather than calibration of the colour model. The six-condition AOS series is a plan; the workbook contains placeholders and an example log, not completed results. No titration results or internal source documents are published. The voltage comparison is an initial check, not a validated full-range accuracy claim.
+
+Projects and the renewable album explain the VetroSol hybrid concept and link to its public project site. Israel’s field installation role remains separate from the team’s published CFD and wind-tunnel work. No prototype performance figures are presented as measured field performance.
