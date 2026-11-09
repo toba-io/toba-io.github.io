@@ -89,3 +89,7 @@ Research and Gallery include five new laboratory assets: the IKA micropipette in
 Process descriptions use the supplied Titration_SoC_procedure_EN document and VRFB_AOS_variation_plan_v3 workbook. Titration provides independent validation of colour-based SoC, rather than calibration of the colour model. The six-condition AOS series is a plan; the workbook contains placeholders and an example log, not completed results. No titration results or internal source documents are published. The voltage comparison is an initial check, not a validated full-range accuracy claim.
 
 Projects and the renewable album explain the VetroSol hybrid concept and link to its public project site. Israel’s field installation role remains separate from the team’s published CFD and wind-tunnel work. No prototype performance figures are presented as measured field performance.
+
+### Media ordering preference
+
+Keep related experiments grouped and show progress from earlier work to later work within each group. New media goes at the bottom of its own segment, introduced by the reason for the next step. Research now shows the original pipette/CAD and printing before the finished stand, initial voltage checks before the Rigol comparison, and titrant preparation/visual endpoints before potential-monitored titration. Gallery follows the same chronological subject groups. Preserve all earlier media.
