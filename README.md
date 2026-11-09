@@ -12,7 +12,7 @@ No build tool or package installation is needed. Edit the HTML files directly:
 - `software.html`: Reclaimer Labs / MarginPilot and selected public GitHub repositories.
 - `building.html`: compatibility redirect to `software.html#building`.
 - `gallery.html`: photographs and captions.
-- `renewable-project.html`: the complete renewable-project media album (9 photographs and one full video).
+- `renewable-project.html`: the VetroSol media album (6 photographs and one full video).
 - `*-media.html`: separate media albums for Topaz, Sharjah, tensor-train hoDMD, Flora Wand, battery siting, storage models, and StressBoard.
 - `assets/style.css`: colours, typography, and responsive layouts.
 - `assets/site.js`: mobile navigation, battery illustration, and photograph viewer.
@@ -64,7 +64,7 @@ The homepage animation is an accelerated explanatory schematic, separate from th
 
 The gallery reflects the supplied project context: plant monitoring/control, renewable-energy work with friends, Topaz industrial immersion, storage-model coursework, lithium-lab visits, Nigerian National Youth Service, church, and everyday life. Lithium-lab visits are distinguished from original flow-battery research. HEIC photographs are converted to WebP; the industrial-poster contact line is obscured in its public copy. Complete videos are encoded at 2× speed, have no audio or location metadata, and automatically play silently on a loop when at least 25% visible. They pause offscreen or in a background tab; reduced-motion visitors retain manual playback. All three lithium-lab videos are included. Original media is unchanged.
 
-The NYSC image uses an SVG viewport to crop the right-hand side of the original photograph without regenerating faces or changing the source pixels. The renewable album keeps nine photographs and the full video. Of the three similar photos with the same friend, only IMG_0516.JPG is used across the site. StressBoard is described as a team prototype and links to the shared presentation; private repository and workspace links are omitted from the public pages.
+The NYSC image uses an SVG viewport to crop the right-hand side of the original photograph without regenerating faces or changing the source pixels. The VetroSol album keeps six photographs and the full video. Of the three similar photos with the same friend, only IMG_0516.JPG is used across the site. StressBoard is described as a team prototype and links to the shared presentation; private repository and workspace links are omitted from the public pages.
 
 Additional project context: [Israel’s LinkedIn profile](https://www.linkedin.com/in/israel-owolabi-031867381/).
 
@@ -93,3 +93,7 @@ Projects and the renewable album explain the VetroSol hybrid concept and link to
 ### Media ordering preference
 
 Keep related experiments grouped and show progress from earlier work to later work within each group. New media goes at the bottom of its own segment, introduced by the reason for the next step. Research now shows the original pipette/CAD and printing before the finished stand, initial voltage checks before the Rigol comparison, and titrant preparation/visual endpoints before potential-monitored titration. Gallery follows the same chronological subject groups. Preserve all earlier media.
+
+## 10 November 2026 project attribution correction
+
+IMG_0495, IMG_0496 and IMG_0497 belong to a different project, not VetroSol (confirmed by Israel). Their WebP copies are omitted from the VetroSol album and the corresponding Gallery grouping. Do not reintroduce them as VetroSol media. Source files are retained.
