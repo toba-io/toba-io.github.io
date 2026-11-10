@@ -69,3 +69,4 @@
 #main-study .section-head>p,#oxidation-states .section-head>p{max-width:470px}
 .research-hero.solo{grid-template-columns:minmax(0,860px)}
 #checks .table-scroll{margin-top:30px}#synthetic-study .wide-figure{margin-top:30px}
+@media(max-width:740px){.page-intro h1 br{display:none}.metric strong{font-size:26px}.metric span{font-size:11px}.metric+ .metric{padding-left:12px}}
