@@ -113,3 +113,7 @@ On Research, show calendar dates only in the “Where things stand” timeline. 
 ### Describe the work directly
 
 Public descriptions should explain the activity and its purpose, rather than announcing media updates. Avoid “new video”, “new photographs”, “latest update” and similar wording that becomes stale. Keep update chronology in the Research progress timeline and internal records.
+
+## 13 November 2026 reader media
+
+Added IMG_1810.MOV to the OCV reader project page and its Gallery group, after the existing voltage checks. The full clip shows the live OCV/colour display and bench setup. Its public copy is silent H.264 at 2× speed with camera metadata removed, using the existing in-view playback controls; the original is untouched. Before editing, the checkout was fast-forwarded to 5547226 (Topaz video removal) and all 95 live pages/assets matched the local files, with text line endings normalised.
