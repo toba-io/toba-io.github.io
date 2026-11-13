@@ -21,7 +21,7 @@ No build tool or package installation is needed. Edit the HTML files directly:
 
 Keep the navigation/footer consistent across pages. Update the footer date, research dates, and `sitemap.xml` when adding substantial work. Published work should be identified separately from internal reports, course drafts, and work in progress.
 
-The photographs are optimised WebP copies without camera metadata. The originals are untouched. Report images are excerpts from the supplied research report and course draft; the full reports are not distributed here. Figures retain their source context and the co-authored project credits Mariya Sokolovskaya.
+The photographs are optimised WebP copies without camera metadata. The originals are untouched. Report images retain their source context. The final Sharjah PV/ESS course report is available for download and credits co-author Mariya Sokolovskaya; the full internal research reports are not distributed here.
 
 ## Preview and check
 
@@ -117,3 +117,9 @@ Public descriptions should explain the activity and its purpose, rather than ann
 ## 13 November 2026 reader media
 
 Added IMG_1810.MOV to the OCV reader project page and its Gallery group, after the existing voltage checks. The full clip shows the live OCV/colour display and bench setup. Its public copy is silent H.264 at 2× speed with camera metadata removed, using the existing in-view playback controls; the original is untouched. Before editing, the checkout was fast-forwarded to 5547226 (Topaz video removal) and all 95 live pages/assets matched the local files, with text line endings normalised.
+
+## 14 November 2026 enclosure build and Sharjah report
+
+The reader project and Gallery show the perfboard assembly (IMG_1840), enclosure sketch (IMG_1845), supplied Fusion screenshot, printing (camphoto_1804928587), and final assembly (IMG_1942). Self-contained SVGs add numbered vector callouts over the original photo copies without regenerating hardware. The final assembly identifies the ESP32 and ADS1115 as inside the enclosure. Public copy distinguishes this completed packaging from the planned second reader with two OCV channels and redesigned light-sensor housings. These changes do not establish improved electrical accuracy, waterproofing or chemical resistance. Originals remain unchanged; camera metadata is removed from optimised copies. The timeline date records this update, not a confirmed fabrication date.
+
+The supplied eight-page final PV/ESS report is available directly under assets/documents, linked from Projects and the Sharjah album with Israel Owolabi and Mariya Sokolovskaya credited. This supersedes the earlier decision not to distribute the full course report; other internal reports and manuscript files remain excluded. All 97 pre-edit live pages/assets matched the checkout.
