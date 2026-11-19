@@ -65,3 +65,10 @@ if (videos.length) {
   document.addEventListener('visibilitychange', () => videos.forEach(updateVideo));
   reducedMotion.addEventListener('change', () => videos.forEach(updateVideo));
 }
+
+// Preserve incoming links to the former combined research page.
+const researchDestinations = {"main-study": "flow-battery-research.html#main-study", "digital-twin": "flow-battery-research.html#digital-twin", "model-structure": "flow-battery-research.html#model-structure", "cell-design": "flow-battery-research.html#cell-design", "tools": "flow-battery-research.html#tools", "experimental-phase": "flow-battery-research.html#experimental-phase", "ocv-reader": "flow-battery-research.html#ocv-reader", "synthetic-study": "flow-battery-research.html#synthetic-study", "he-synthetic": "flow-battery-research.html#he-synthetic", "foundations": "flow-battery-research.html#foundations", "oxidation-states": "oxidation-state-study.html#oxidation-states", "ten-cycle": "oxidation-state-study.html#ten-cycle", "titration": "oxidation-state-study.html#titration", "potentiometric-titration": "oxidation-state-study.html#potentiometric-titration", "aos-series": "oxidation-state-study.html#aos-series", "pipette-stand": "oxidation-state-study.html#pipette-stand", "pipette-stand-finished": "oxidation-state-study.html#pipette-stand-finished", "overview": "research.html"};
+if (location.pathname.endsWith("/research.html") && location.hash) {
+  const destination = researchDestinations[location.hash.slice(1)];
+  if (destination) location.replace(destination);
+}

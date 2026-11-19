@@ -6,12 +6,15 @@ A static academic and engineering portfolio for **https://toba-io.github.io/**.
 
 No build tool or package installation is needed. Edit the HTML files directly:
 
-- `index.html`: introduction, selected work, and short biography.
-- `research.html`: thesis, research status, and writing.
-- `projects.html`: PV/storage course project and practical work.
-- `software.html`: Reclaimer Labs / MarginPilot and selected public GitHub repositories.
-- `building.html`: compatibility redirect to `software.html#building`.
-- `gallery.html`: photographs and captions.
+- `index.html`: background, education, research experience and professional history.
+- `research.html`: overview of the two research studies.
+- `flow-battery-research.html`: main research, measured results, synthetic tests and expandable supporting evidence.
+- `oxidation-state-study.html`: oxidation-state experiment, titration and its own media.
+- `projects.html`: Reclaimer Labs, PV/storage, industrial and practical work.
+- `reclaimer-labs.html`: MarginPilot product-building project.
+- `software.html`: legacy redirect to Projects.
+- `building.html`: legacy redirect to the Reclaimer project entry.
+- `gallery.html`: legacy redirect to Projects; there is no combined gallery.
 - `renewable-project.html`: the VetroSol media album (6 photographs and one full video).
 - `*-media.html`: separate media albums for Topaz, Sharjah, tensor-train hoDMD, Flora Wand, battery siting, storage models, and StressBoard.
 - `assets/style.css`: colours, typography, and responsive layouts.
@@ -129,3 +132,9 @@ The supplied eight-page final PV/ESS report is available directly under assets/d
 Israel confirmed that the Nafion-117 record is the first run of the controlled three-membrane comparison. Research and Home now describe the study as underway, with the first run complete and initial analysis available. The measured protocol (0.4 A, 4 cm2, 35 mL, 30 s rests, no polarisation curves) replaces the earlier proposed conditions in the main-study summary. The capacity comparison uses loop cycle 1 (1.009 Ah) through cycle 51 (0.132 Ah), excluding conditioning. The remaining membranes are planned; no completed cross-membrane conclusion is claimed. The 300-set model check does not explain the full loss within its tested ranges, and copper-related mechanisms remain unconfirmed and are not presented as a result.
 
 The earlier protocol-design simulation is retained before the controlled He-style synthetic test, based on current_study/synthetic_study/1_he_synthetic_test.ipynb and the corrected 18 Nov progress entry. Five known parameter sets and two starts compare least squares, an Adam-plus-L-BFGS variant and L-BFGS-only PCDNN. The parameter-error figure shows the Adam variant and is labelled accordingly; the text distinguishes the all-six-parameter recovery by L-BFGS-only with polarisation curves. Four complete source figures from the two notebooks are copied as lossless WebP assets with dimensions and accessible captions. No raw data, internal notebooks, progress files or manuscript PDFs are published.
+
+## 19 November 2026 navigation and profile restructure
+
+Israel requested only Home, Research and Projects, with no public-code section and no combined gallery. This supersedes the earlier Software & Building and combined-gallery organisation. Home is a readable profile of his background, education, research and work experience, not a downloadable CV. Academic facts follow the saved CV template and current experience record; the MSc is in progress, without an asserted defence date. The homepage battery demonstration and mixed personal gallery are removed from the rendered page.
+
+Research now has exactly two project-style entries. The main study has flow-battery-research.html, with the measured Nafion-117 record and current synthetic test first; earlier simulations, model foundations/cell design and the earlier writing are expandable. The oxidation-state study has oxidation-state-study.html, with its own experiment and titration media. Sampling-tool media is available in an expandable section. Both link to the existing OCV reader project instead of repeating its build gallery. Reclaimer/ MarginPilot is under Projects with reclaimer-labs.html. Other project albums retain only their own media. Navigation and footer links to the combined gallery and public repositories are removed from every page. Old software, building and gallery URLs redirect to Projects; old research fragments route to the appropriate study. Original media files are retained.

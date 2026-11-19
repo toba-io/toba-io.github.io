@@ -10,9 +10,13 @@ class Page(HTMLParser):
         super().__init__()
         self.path, self.ids, self.links, self.errors = path, set(), [], []
         self.title = self.h1 = self.description = self.viewport = False
+        self.in_navigation, self.navigation, self.project_count = False, [], 0
 
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
+        if tag == 'nav' and a.get('id') == 'navigation': self.in_navigation = True
+        if tag == 'a' and self.in_navigation: self.navigation.append(a.get('href'))
+        if tag == 'article' and 'context-project' in a.get('class', '').split(): self.project_count += 1
         if 'id' in a:
             if a['id'] in self.ids:
                 self.errors.append('duplicate id: '+a['id'])
@@ -25,6 +29,9 @@ class Page(HTMLParser):
         for attr in ('href','src','poster'):
             if a.get(attr): self.links.append(a[attr])
 
+    def handle_endtag(self, tag):
+        if tag == 'nav': self.in_navigation = False
+
 pages = {}
 for path in ROOT.glob('*.html'):
     parsed = Page(path)
@@ -34,10 +41,16 @@ for path in ROOT.glob('*.html'):
 errors = []
 for path, page in pages.items():
     errors.extend(f'{path.name}: {e}' for e in page.errors)
+    if page.navigation != ['index.html', 'research.html', 'projects.html']:
+        errors.append(f'{path.name}: navigation must contain only Home, Research and Projects')
+    if path.name == 'research.html' and page.project_count != 2:
+        errors.append('research.html: expected exactly two study entries')
     for name in ('title','h1','description','viewport'):
         if not getattr(page,name): errors.append(f'{path.name}: missing {name}')
     for link in page.links:
         url = urlsplit(link)
+        if url.path in ('gallery.html', 'software.html', 'building.html') or url.netloc == 'github.com':
+            errors.append(f'{path.name}: retired gallery or public-code link: {link}')
         if url.scheme or url.netloc: continue
         target = (path.parent/unquote(url.path)).resolve() if url.path else path
         if not target.is_relative_to(ROOT):
